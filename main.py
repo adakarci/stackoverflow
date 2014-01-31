@@ -49,7 +49,7 @@ What are the search options ?
         if not i.isdigit():
             list2.append(i)
 
-    if len(list) == 0:
+    if len(list2) == 0:
         parser.error("you can display help message [-h]")
 
     tagname = list2[0]
