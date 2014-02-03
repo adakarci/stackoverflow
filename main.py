@@ -52,15 +52,18 @@ What are the search options ?
     if len(list2) == 0:
         parser.error("you can display help message [-h]")
 
-    tagname = list2[0]
+    
 
-    if len(list2) == 1:
+    elif len(list2) == 1:
+        tagname = list2[0]
         tagname2 = tagname
-
+        
     elif len(list2) == 2:
         tagname2 = list2[1]
+        tagname = list2[0]
     else:
         parser.error("you can display help message [-h]")
+
     collect = CollectQuestions(start, end, tagname, tagname2)
     collector = CollectedDesign()
     outfile = file("stackover_"+tagname+".html", "w")

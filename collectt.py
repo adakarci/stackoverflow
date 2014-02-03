@@ -21,7 +21,6 @@ class CollectQuestions:
         list2 = []
         for page in range(int(self.start), int(self.end)):
             list1 = []
-            
             try:
                 url = self.source+str(page)
                 openurl = urllib.urlopen(url)
@@ -33,7 +32,7 @@ class CollectQuestions:
             except AttributeError:
                 pass
 
-            if self.tagname2 and self.tagname in list1:
+            if self.tagname and self.tagname2 in list1:
                 try:
                     question = soup.find("div", "post-text")
                     title = soup.find("a", "question-hyperlink")

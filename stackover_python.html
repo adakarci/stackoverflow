@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<title></title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<style>
+html{
+    width: 100%;
+    height: 100%;
+}
+body {
+font-family: Arial,sans-serif;
+font-size: 15px;
+width: 500px;
+}
+code{
+    background-color: #EAE8E8 ;
+}
+.question-hyperlink{
+	color:#D10614;
+	font-size:22px;
+	font-weight:bold;
+}
+
+h4{
+	color:#FF6600 ;
+    size:3em;
+}
+.box {
+border :1px solid;
+margin-left:300px;
+margin-top:50px;
+margin-right:150px;
+width:800px;
+height: auto;
+overflow: scroll;
+}
+
+</style>
+</head>
+<body>
+
+<script>
+
+ $(function() {
+    $('h4').on('click', function(event) {
+        var $this = $(this);
+        if ($this.text()==="unread"){
+            $this.text("read");
+           //localStorage.setItem('read', 'read'); I wanted to use localStorage and jquery but it failed. Can you?
+        }
+        else if ($this.text()==="read"){
+            $this.text("unread");
+           //localStorage.setItem('read', 'unread');
+        }
+    });
+});
+</script>
+
+
+
+</body>
+</html>
